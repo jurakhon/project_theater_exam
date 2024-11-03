@@ -1,0 +1,30 @@
+<!doctype html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"></link>
+</head>
+<body>
+
+<div class="container">
+    {% for movie in movie_list %}
+    <div class="subcontainer">
+        <h2>ID: {{ movie.id }}</h2>
+        <h2>Name: {{ movie.name }}</h2>
+        <h2>Genre: {{ movie.genre }}</h2>
+        <h2>Date of Release: {{ movie.date_of_release }}</h2>
+        <p>Description: {{ movie.description }}</p>
+        <img src="{{ movie.image.url }}" alt="">
+        <h2> <a href="{{ movie.trailer }}">Trailer</a></h2>
+        
+    </div>
+    {% endfor %}
+</div>
+
+</body>
+</html>

@@ -12,11 +12,15 @@
 <body>
 
 <div class="container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update</button>
-    </form>
+    {% for user in user_list %}
+    <div class="subcontainer">
+        <h2>ID: {{ user.id }}</h2>
+        <h2>Name: {{ user.name }}</h2>
+        <h2>Surname: {{ user.surname }}</h2>
+        <h2>Phone Number: {{ user.phone_number }}</h2>
+    
+    </div>
+    {% endfor %}
 </div>
 
 </body>

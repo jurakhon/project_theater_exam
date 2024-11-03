@@ -12,11 +12,17 @@
 <body>
 
 <div class="container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update</button>
-    </form>
+    {% for theater in theater_list %}
+    <div class="subcontainer">
+        <h2>ID: {{ theater.id }}</h2>
+        <h2>Name: {{ theater.name }}</h2>
+        <h2>Movie: {{ theater.movie }}</h2>
+        <h2>Seat Quantity: {{ theater.seat_quantity }}</h2>
+        <h2>Price: {{ theater.price }}</h2>
+        <h2>Show_date: {{ theater.show_time }}</h2>
+        
+    </div>
+    {% endfor %}
 </div>
 
 </body>

@@ -6,22 +6,22 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie Detail</title>
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/main.css' %}"></link>
 </head>
 <body>
+
 <div class="container">
+   
     <div class="subcontainer">
-        <h2>Name: {{movie_detail.title}}</h2>
-        <h2>Genre: {{movie_detail.genre}}</h2>
-        <h2>Date of Release: {{movie_detail.date_of_release}}</h2>
-        <p>Description: {{movie_detail.description}}</p>
-        <img src="{{ movie_detail.image.url }}" alt="...">
-        <h2><a href="{{ movie_detail.trailer }}">Trailer</a></h2>
+        <h2>ID: {{ user_detail.id }}</h2>
+        <h2>Name: {{ user_detail.name }}</h2>
+        <h2>Surname: {{ user_detail.surname }}</h2>
+        <h2>Phone Number: {{ user_detail.phone_number }}</h2>
+    
     </div>
     
 </div>
-
-
 
 </body>
 </html>

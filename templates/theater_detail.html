@@ -6,17 +6,17 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Movie Detail</title>
+    <title>Theater Detail</title>
 </head>
 <body>
 <div class="container">
     <div class="subcontainer">
-        <h2>Name: {{movie_detail.title}}</h2>
-        <h2>Genre: {{movie_detail.genre}}</h2>
-        <h2>Date of Release: {{movie_detail.date_of_release}}</h2>
-        <p>Description: {{movie_detail.description}}</p>
-        <img src="{{ movie_detail.image.url }}" alt="...">
-        <h2><a href="{{ movie_detail.trailer }}">Trailer</a></h2>
+        <h2>Name: {{theater_detail.name}}</h2>
+        <h2>Movie: {{theater_detail.movie}}</h2>
+        <h2>Is_active: {{theater_detail.is_active}}</h2>
+        <h2>Seat Quantity: {{theater_detail.seat_quantity }}</h2>
+        <h2>Price: {{theater_detail.price}}</h2>
+        <h2>Show_time: {{theater_detail.show_time}}</h2>
     </div>
     
 </div>

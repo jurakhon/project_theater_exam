@@ -12,11 +12,15 @@
 <body>
 
 <div class="container">
-    <form method="POST" enctype="multipart/form-data">
-        {% csrf_token %}
-        {{ form.as_p }}
-        <button type="submit">Update</button>
-    </form>
+    <div class="subcontainer">
+        <h2>ID: {{ order_detail.id }}</h2>
+        <h2>User: {{ order_detail.user }}</h2>
+        <h2>Movie: {{ order_detail.movie }}</h2>
+        <h2>Theater: {{ order_detail.theater }}</h2>
+        <h2>Quantity: {{ order_detail.quantity }}</h2>
+        <h2>Order Date: {{ order_detail.order_date }}</h2>
+       
+    </div>
 </div>
 
 </body>
