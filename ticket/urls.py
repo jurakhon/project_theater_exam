@@ -27,6 +27,7 @@ urlpatterns = [
     path('ordercreate/',OrderCreateView.as_view(), name='order_create'),
     path('orderupdate/<int:pk>',OrderUpdateView.as_view(), name='order_update'),
     path('orderdelete/<int:pk>',OrderDeleteView.as_view(), name='order_delete'),
+    path('', MovieIndexListView.as_view(), name='movie_list'),
 
 
 

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Online Theater - Home</title>
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+</head>
+<body>
+    <header>
+        <h1>Welcome to the Online Theater</h1>
+        <p>Discover our movies, watch trailers, and order tickets online!</p>
+    </header>
+
+    <main>
+        <h2>Now Showing</h2>
+        <ul class="movie-list">
+            {% for movie in movie_list %}
+                <li class="movie-item">
+                    <img src="{{ movie.image.url }}" alt="{{ movie.name }}" width="200">
+                    <h3>{{ movie.name }}</h3>
+                    <p><strong>Genre:</strong> {{ movie.genre.name }}</p>
+                    <p><strong>Release Date:</strong> {{ movie.date_of_release }}</p>
+                    <p>{{ movie.description|truncatewords:20 }}</p>
+                    
+                    <div class="movie-buttons">
+                        <a href="{{ movie.trailer }}" target="_blank" class="btn">Watch Trailer</a>
+                        <a href="{% url 'movie_detail' movie.id %}" class="btn">View Details</a>
+                        <a href="{% url 'order_create' %}" class="btn">Order Now</a>
+                    </div>
+                </li>
+            {% empty %}
+                <p>No movies available at the moment.</p>
+            {% endfor %}
+        </ul>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Online Theater. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -149,6 +149,11 @@ class OrderDeleteView(DeleteView):
     context_object_name = "order_delete"
     success_url = reverse_lazy("order_list")
 
+class MovieIndexListView(ListView):
+    model = Movie
+    template_name = "index.html"
+    context_object_name = "movie_list"
+
 
 
 
